@@ -18,6 +18,12 @@ function generateMarkdown(response) {
 ## Description
 ${response.description}
 
+## Table of Contents
+* [Installation](#Installation)
+* [Usage Information](#Usage-Information)
+* [Contribution Guidlines](#Contribution-Guidelines)
+* [Test Instructions](#Test-Instructions)
+
 ## Installation
 ${response.installation}
 
