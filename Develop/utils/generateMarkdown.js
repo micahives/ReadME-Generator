@@ -8,7 +8,14 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'No license please') {
+    return `## License
+${license}`;
+  } else {
+    return '';
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
@@ -21,23 +28,40 @@ ${response.description}
 ## Table of Contents
 * [Installation](#Installation)
 * [Usage Information](#Usage-Information)
-* [Contribution Guidlines](#Contribution-Guidelines)
+* [Contributing](#Contributing)
 * [Test Instructions](#Test-Instructions)
+`;
 
-## Installation
-${response.installation}
+  if (response.license !== 'No license please') {
+    markdown += `* [License](#License)\n`;
+  }
+
+  markdown += `* [Questions](#Questions)\n\n`;
+
+  markdown += `## Installation
+  ${response.installation}
 
 ## Usage Information
 ${response.usage}
 
-## Contribution Guidelines
+## Contributing
 ${response.contribution}
 
 ## Test Instructions
 ${response.test}
-`
+\n`;
+
+  if (response.license !== 'No license please') {
+    markdown += renderLicenseSection(response.license);
+  }
+
+  markdown += `\n
+## Questions
+For additional questions, you can reach me at:
+${response.questions}
+`;
 
 return markdown;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown, renderLicenseSection;

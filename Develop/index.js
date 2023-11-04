@@ -10,7 +10,8 @@ const questions = [
     'Enter any installation instructions:',
     'What is the usage information?',
     'What are the contribution guidelines?',
-    'What are the test instructions?'
+    'What are the test instructions?',
+    'Which open-source license would you prefer?'
 ];
 
 // TODO: Create a function to write README file
@@ -54,6 +55,12 @@ function init() {
         type: 'input',
         name: 'test',
         message: questions[5],
+        },
+        {
+        type: 'list',
+        name: 'license',
+        message: questions[6],
+        choices: ['MIT', 'GPL', 'Apache', 'BSD', 'MPL', 'No license please'],
         },
     ])
     .then((response) => {
