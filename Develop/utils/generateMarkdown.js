@@ -32,8 +32,9 @@ ${response.description}
 * [Test Instructions](#Test-Instructions)
 `;
 
+// if the user selects a license, the markdown will display 'License' link in the table of contents
   if (response.license !== 'No license please') {
-    markdown += `* [License](#License)\n`;
+    markdown += `* [License](#License)\n\n`;
   }
 
   markdown += `* [Questions](#Questions)\n\n`;
@@ -51,6 +52,8 @@ ${response.contribution}
 ${response.test}
 \n`;
 
+// if the user selects a license, renderLicenseSection will fire and the markdown...
+//  will display the 'License' section header and the selected license
   if (response.license !== 'No license please') {
     markdown += renderLicenseSection(response.license);
   }
@@ -64,4 +67,4 @@ ${response.questions}
 return markdown;
 }
 
-module.exports = generateMarkdown, renderLicenseSection;
+module.exports = generateMarkdown, renderLicenseSection, renderLicenseLink, renderLicenseBadge;
