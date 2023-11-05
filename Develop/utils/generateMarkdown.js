@@ -49,7 +49,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 
-// NOTE TO A REVIEWER: 
+// NOTE: 
 // THE LICENSE LINK IS CONTAINED IN THE BADGE ICON, AND WHEN THE BADGE IS CLICKED,...
 // THE LINK TO THE CORRESPONDING LICENSE PAGE IS REACHED. LINKS FOUND IN 'licenseBadeURL' OBJECTS, USED IN...
 // THE 'renderLicenseBadge' FUNCTION. 
@@ -60,7 +60,7 @@ function renderLicenseBadge(license) {
 function renderLicenseSection(license) {
   if (license !== 'No license please') {
     return `## License
-${license}`;
+This project is licensed under the ${license} license - click on the license badge near the top of the page for details.`;
   } else {
     return '';
   }
@@ -72,8 +72,8 @@ function generateMarkdown(response) {
     `# ${response.title}
 
 ## Description
-${response.description}\n\n
-`;
+${response.description}\n\n`;
+
 if (response.license !== 'No license please') {
   markdown += renderLicenseBadge(response.license);
 }
@@ -85,14 +85,15 @@ if (response.license !== 'No license please') {
 * [Test Instructions](#Test-Instructions)
 `;
 
-// if the user selects a license, the markdown will display 'License' link in the table of contents
+// if the user selects a license, the markdown will display a link to the'License' section in the table of contents
   if (response.license !== 'No license please') {
-    markdown += `* [License](#License)\n\n`;
+    markdown += `* [License](#License)\n`;
   }
 
   markdown += `* [Questions](#Questions)\n\n`;
 
   markdown += `## Installation
+  
   ${response.installation}
 
 ## Usage Information
@@ -113,8 +114,9 @@ ${response.test}
 
   markdown += `\n
 ## Questions
-For additional questions, you can reach me at:
-${response.questions}
+For additional questions, reach out here:\n
+* GitHub: [${response.github}](https://github.com/${response.github})\n
+* Email: ${response.email}
 `;
 
 return markdown;
