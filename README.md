@@ -1,7 +1,7 @@
 # ReadME-Generator
 
 ## Description
-This is a CLI app for generating README.md files through the command line. Built with JavaScript, including Node.js, NPM Inquirer and NPM fs. 
+This is a CLI app for generating README.md files through the command line. Built with JavaScript, featuring Node.js, NPM Inquirer and NPM fs. 
 
 ### Features
 * Dynamically generates professional-looking README.md files through the command line.
