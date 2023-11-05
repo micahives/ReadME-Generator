@@ -1,7 +1,7 @@
-# a
+# README.md Generator
 
 ## Description
-b
+To generate professional README files through the command line.
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -14,16 +14,17 @@ b
 * [Questions](#Questions)
 
 ## Installation
-  c
+  
+  Insert installation instructions
 
 ## Usage Information
-d
+Put usage information here
 
 ## Contributing
-e
+NA
 
 ## Test Instructions
-f
+Test instructions here
 
 ## License
 This project is licensed under the Apache 2.0 license - click on the license badge near the top of the page for details.
@@ -31,6 +32,6 @@ This project is licensed under the Apache 2.0 license - click on the license bad
 ## Questions
 For additional questions, reach out here:
 
-* GitHub: [micahives](https://github.com/micahives)
+* GitHub: [torvalds](https://github.com/torvalds)
 
-* Email: micbenives@gmail.com
+* Email: testemail123@gmail.com
