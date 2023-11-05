@@ -60,7 +60,7 @@ function init() {
         type: 'list',
         name: 'license',
         message: questions[6],
-        choices: ['MIT', 'GPL', 'Apache', 'BSD', 'MPL', 'No license please'],
+        choices: ['MIT', 'GNU GPL v3', 'Apache 2.0', 'BSD-3', 'Mozilla Public License 2.0', 'No license please'],
         },
     ])
     .then((response) => {
