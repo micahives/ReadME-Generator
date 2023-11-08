@@ -10,7 +10,6 @@ This is a CLI app for generating README.md files through the command line. Built
 ### Screenshot
 
 ![screenshot](./Develop/Assets/Screenshot%202023-11-05%20at%201.21.55 PM.png)
-Note: sample README.md located in Develop/README.md, while project README.md located in project root.
 
 ### Video Example
 
